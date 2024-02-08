@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <!--Link to the css file-->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Link to the JavaScript file-->
+        <script src="js/script.js" defer></script>
+        
+        <header>
+            <h1>Green Home Solutions</h1>
+        </header>
+   </head>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="information.html">Information</a>
+        <a href="cost.html">Cost</a>
+        <a href="tax.html">Tax Rebates & Sources</a>
+    </nav>
+
+<body>
+    <section id="information">
+        <h2>Information about Green Energy</h2>
+
+        <p>Green energy refers to energy that is produced using environmentally friendly methods and sources. It is also known as renewable energy because it comes from resources that are naturally replenished.</p>
+
+        <h3>Types of Green Energy Sources:</h3>
+
+        <ul>
+            <li><strong>Solar Energy:</strong> Captures energy from the sun using photovoltaic cells or solar panels.</li>
+            <li><strong>Wind Energy:</strong> Harnesses the power of the wind to generate electricity through wind turbines.</li>
+            <li><strong>Hydropower:</strong> Generates electricity by capturing the energy of flowing water, typically through dams or water turbines.</li>
+            <li><strong>Biomass:</strong> Uses organic materials, such as plants and waste, to produce energy.</li>
+            <li><strong>Geothermal Energy:</strong> Taps into the Earth's internal heat to generate electricity or provide heating.</li>
+        </ul>
+
+        <h3>Advantages of Green Energy:</h3>
+
+        <ul>
+            <li>Reduces Greenhouse Gas Emissions</li>
+            <li>Promotes Sustainable and Clean Energy</li>
+            <li>Decreases Dependence on Fossil Fuels</li>
+            <li>Creates Job Opportunities in the Renewable Energy Sector</li>
+            <li>Minimizes Environmental Impact</li>
+        </ul>
+    </section>
+
+    <div class="faq-container">
+        <div class="faq-question" onclick="toggleAnswer(1)">What is Renewable Energy?</div> <!--When clicked it causes the box to drop down instead of the immediate opening-->
+        <div class="faq-answer" id="answer1">Renewable energy is energy that comes from resources that are naturally replenished...</div>
+
+        <div class="faq-question" onclick="toggleAnswer(2)">How does Solar Energy Work?</div>
+        <div class="faq-answer" id="answer2">Solar energy works by capturing the sun's energy and converting it into electricity...</div>
+
+        <div class="faq-question" onclick="toggleAnswer(3)">Are there Cons?</div>
+        <div class="faq-answer" id="answer3">
+            <ul>
+            <li>Solar & Wind depend on Weather Condtions</li>
+            <li>Batteries used to store green energy may have limitations in terms of capacity, efficiency, and environmental impact. </li>
+            <li>High Initial Cost</li>
+            <li>Solar & Wind Farms require Significant Land Areas (Habitat Disruption)</li>
+            <li>Lower Energy Density Compared to Fossil Fuel, This means that more land or equipment may be required to generate the same amount of energy.</li>
+        </ul>
+    </div>
+
+
+
+</body>
+</html>

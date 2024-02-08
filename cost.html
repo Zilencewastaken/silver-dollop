@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <!--Link to the css file-->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Link to the JavaScript file-->
+        <script src="js/script.js" defer></script>
+        
+        <header>
+            <h1>Green Home Solutions</h1>
+        </header>
+    </head>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="information.html">Information</a>
+        <a href="cost.html">Cost</a>
+        <a href="tax.html">Tax Rebates & Sources</a>
+    </nav>
+
+<body>
+    <section id="cost">
+        <h2>Cost of Green Energy Use</h2>
+        <p>Investing in green energy solutions for your home can have initial costs, but the long-term benefits are substantial. Here are some factors to consider:</p>
+
+        <ul>
+            <li><strong>Initial Installation:</strong> The cost of installing solar panels, wind turbines, or other green energy systems.</li>
+            <li><strong>Operational Costs:</strong> Maintenance, repairs, and ongoing expenses associated with green energy systems.</li>
+            <li><strong>Return on Investment:</strong> Calculate potential savings on energy bills and any incentives or rebates available.</li>
+            <li><strong>Environmental Impact:</strong> Consider the positive impact on the environment and the value it adds to your property.</li>
+        </ul>
+
+        <p>It's important to assess your energy needs, available resources, and financial situation before making decisions. Green energy investments often pay off over time, contributing to a sustainable and eco-friendly lifestyle.</p>
+    </section>
+
+
+
+    
+
+
+      <h2>Solar Panel Calculator</h2>
+      <br>
+        <!-- Input for Monthly Energy Consumption -->
+    <label for="monthlyUsage">Monthly Energy Consumption (kWh):</label>
+    <input type="number" id="monthlyUsage" placeholder="Enter your monthly energy consumption">
+
+
+    <!-- Button to Trigger Calculation -->
+    <button onclick="calculateSolarPanels()">Calculate</button>
+
+    <div id="result"></div>
+
+    <small>
+        Looking for a quick estimate of the number of solar panels you'd need based on your energy consumption? Curious about the environmental impact of making the switch? Explore the details and benefits with insights from the
+        <a href="https://www.eia.gov/tools/faqs/faq.php?id=74&t=11" id="https://www.eia.gov/tools/faqs/faq.php?id=74&t=11">U.S. Energy Information Administration</a>.
+      </small>
+
+    <h3>Equivalent Impact:</h3>
+    <div id="equivalentInfo"></div>
+
+    <script>
+        // Function to Calculate Solar Panels Needed
+        function calculateSolarPanels() {
+            const monthlyUsageInput = document.getElementById('monthlyUsage');
+            // Get Monthly Energy Consumption from Input
+            const monthlyUsage = parseFloat(monthlyUsageInput.value);
+
+            if (isNaN(monthlyUsage) || monthlyUsage <= 0) {// checks if number is a valid number (less than 0 causes the alert) (isNaN(monthlyUsage) checks if its a number
+                alert('Please enter a valid positive number for monthly energy consumption.');
+                monthlyUsageInput.value = ''; // Clear the input
+                return;
+            }
+            // Estimate Panels Needed (Assuming 300 kWh per Panel)
+            const panelsNeeded = Math.ceil(monthlyUsage / 300);
+             // Display Result
+            const resultElement = document.getElementById('result');
+            resultElement.innerHTML = `<p>You would need approximately ${panelsNeeded} solar panels to match your monthly energy use with renewable energy.</p>`;
+
+            // Calculate equivalent impact
+            const gasSaved = (monthlyUsage / 0.97).toFixed(2); //Gallons of Gasoline Equivalent: Assumes 0.97 gallons of gasoline emissions per kWh. 
+            const coalBurned = (monthlyUsage / 2.30).toFixed(2); // Coal Burn Equivalent: Assumes 2.30 pounds of CO2 emissions per kWh.
+            const co2Reduced = (0.5 * monthlyUsage).toFixed(2); // Carbon Dioxide Reduction Equivalent: Assumes 0.5 pounds of CO2 emissions avoided per kWh.
+            const equivalentInfoElement = document.getElementById('equivalentInfo');
+            equivalentInfoElement.innerHTML = `
+                <p>Equivalent Impact:</p>
+                <ul>
+                    <li>${gasSaved} gallons of gas saved per month</li>
+                    <li>${coalBurned} pounds of coal burned per month</li>
+                    <li>${co2Reduced} pounds of CO2 emissions reduced per month</li>
+                </ul>
+            `;
+        }
+    </script>
+    
+    <footer>
+        <div class="footer-content">
+          <p>Copyright © 2024 Corinth Holders Green Home Solutions. All rights reserved.</p>
+          <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+          <p>Contact@PirateTSA</p>
+        </div>
+      </footer>
+
+</body>
+</html>

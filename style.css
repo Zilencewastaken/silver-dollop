@@ -1,0 +1,181 @@
+
+/* START OF (For the base color of text,nav, and header) */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+    margin: 0 1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #4CAF50;
+}
+
+section {
+    padding: 2em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: left;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#faq {
+    margin-top: 30px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    color: #0b3f04;
+}
+
+p {
+    margin-top: 10px;
+    color: #333; 
+}
+ /* END OF (For the base color of text,nav, and header) */
+
+
+
+
+/* START OF (animation of switching between tabs)*/ 
+ body {
+    transition: background-color 0.5s ease; /* Smooth background color transition */
+}
+
+h1, h2, h3{
+    opacity: 0; /* Initially set opacity to 0 for fade-in effect */
+    transform: translateY(20px); /* Initially move elements down for slide-up effect */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+h1, h2, h3 {
+    animation: fadeInUp 1s forwards;
+}
+/* This is the animation we get when switching tabs */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* END OF (animation of switching between tabs)*/ 
+
+/* START OF (Spacing of drop boxes on information.html)*/
+
+.faq-answer ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+.faq-answer li {
+margin-bottom: 10px; /* Add space between each bullet point */
+}   
+
+/* END OF (Spacing of drop boxes on information.html)*/
+
+
+
+/*START OF (Hover styles for drop boxes on information.html)*/
+.faq-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.faq-question {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #4CAF50;
+    margin-bottom: 5px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for background-color and color */
+}
+.faq-answer {
+    display: none;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    transition: opacity 2s ease; /* Add transition for opacity */
+}
+.faq-answer {
+max-height: 10;
+overflow: hidden;
+transition: max-height 0.3s ease-out;
+padding: 10px;
+background-color: #ffffff;
+border: 1px solid #333;
+border-radius: 5px;
+}
+.faq-answer.open {
+max-height: 300px; /* Adjust the maximum height as needed */
+}
+/* Add hover styles for FAQ question */
+.faq-question:hover {
+    background-color: #333;
+    color: #fff;
+}
+/* Add hover styles for FAQ answer */
+.faq-question:hover + .faq-answer {
+    opacity: 1;
+}
+/*END OF (Hover styles for drop boxes on information.html)*/
+
+footer {
+    background-color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .footer-content p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .footer-content a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer-content a:hover {
+    text-decoration: underline;
+  }
